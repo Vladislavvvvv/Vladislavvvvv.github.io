@@ -3,17 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NeyroPoisk</title>
 </head>
 <style>
-    .Imagg {
-        width: 50;
-    }
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #ffffff;
+  background: linear-gradient(to right, rgb(89, 0, 255), rgb(7, 7, 127));
+}
+.title {
+position: absolute;
+top: 25%;
+left: 50%;
+margin-right: -50%;
+transform: translate(-50%, -50%);
+text-transform: uppercase;
+color: white;
+width: 800px;
+background: #10026c94;
+padding: 10px;
+text-align: center;
+font: bold 24px/34px Helvetica, Sans-Serif;
+}
+.btn {
+	padding: 0 15px;
+	margin: 0 15px 15px 0;
+	border: 1px solid #7952b3;  
+	border-radius: 5px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+	background-color: #7952b3;
+	cursor: pointer;
+    box-shadow: 0 0 0 3px rgb(121 82 179 / 25%);
+}
+.btn:hover {
+	background-color: #61428f;
+	border-color: #61428f;
+}
+.table {
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse; 
+}
+.table th {
+	font-weight: bold;
+	padding: 5px;
+	background: #7552d6;
+	border: 1px solid #dddddd;
+}
+.table td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+}
 </style>
 <body>
     <center>
-        <h1>Hello!</h1>
-        <img class="Imgg" src="png.png" alt="">
-    </center>
+        <img src="bk.png" alt="">
+        <div class="title">Сайт для подпобра нейросетей для решения проблем</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th><h2>Мы предлогаем нейросети для решения данных проблем:</h2></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><h4>1. Решение Матиматических задач</h4></td></tr>
+            <tr><td><h4>2. Создание Текстов</h4</td></tr>
+            <tr><td><h4>3. Решение Задач по Физике</h4</td></tr>
+            <tr><td><h4>4. Создать рисунок по описанию</h4</td></tr>
+            <tr><td><h4>5. Многое другое</h4</td></tr>
+        </tbody>
+    </table>
+    <button class="btn">Начать поиск</button>
+</center>
 </body>
 </html>
