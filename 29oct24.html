@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-image: url('bk.jpg');
+    }
+    #field {
+        width: 1080px;
+        height: 800px;
+        border: solid 1px;
+    }
+</style>
+<body>
+    <div id="field" onclick="createZombie(event)"></div>
+</body>
+<script>
+    let field = document.getElementById('field');
+
+
+    function createZombie(event) {
+        let zombie = document.createElement('img');
+        zombie.src = 'pvz.gif';
+        document.body.append(zombie);
+
+        let left = event.clientX;
+        let step = 25;
+
+        console.log(event.clientX+':'+event.clientY);
+
+        zombie.style.position = 'fixed';
+        zombie.style.top = event.clientY+'px';
+        zombie.style.left = left + 'px';
+
+        function moveZombie() {
+            left = left + step;
+            if (left > 500){
+                step = step*(-1);
+                zombie.style.transform = 'rotateY(180deg)';
+            }
+            if (left < 1){
+                step = step*(-1);
+                zombie.style.transform = 'rotateY(0deg)';
+            }
+            zombie.style.left = left + 'px';
+        }
+
+        setInterval(moveZombie, 100);
+    }
+</script>
+</html>
